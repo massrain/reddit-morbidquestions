@@ -1,0 +1,1862 @@
+/*
+ *  Custom CSS for subreddit /r/MorbidQuestions
+ *  Created by /u/MassRain - github.com/massrain/
+ *  Inspired by CWParsons' TorontoBlueJays and Naut.
+ */
+ 
+/*     ##CHANGELOG##
+ *     +Link flairs are added, enabled.
+ *     +Hotfix for last active element.
+ *     +Fixed RES active element error
+ *     +Fixed Submit buttons showing up black when clicked.
+ *     +Fixed comment page colors.
+ *     +Fully supporting RES Night Mode
+ *     +Created by .. text is active again, disabling makes small bugs.
+ *     +Sidebar photo is not active
+ *     +Wiki page added, at the bottom of page.
+ *     +Subscribe button.---done
+ *     +New reddit alien logo and subreddit name next to it
+ *     +More announcement posts.
+ *
+ *
+ *     #Under construction#
+ *     -Commend area background
+ *     -RES nightmode improvements
+ *
+ *     ##Colors##
+ *
+ *     Main color is  #313333
+ *     http://www.color-hex.com/color/7097b1
+ *
+ *     Sidebar : #454747
+ *     Link titles -Dark Blue			: #1A459D;
+ *     Active titles - Blue			: #0E2452;
+ *     Body,side,header - Navy Blue		: #052A5F;
+ *     Stickied link -Sky Blue			: #0476BF;
+ *     White					: #FFFFFF;
+ *     Red - Used mainly in RES			: #EC1E31;
+ *
+ */
+
+ 
+ /* Short index
+ *	1 general
+ *      *Announcement text between 1&2
+ *	2 header
+ *	3 banner
+ *	4 clickable subreddit name
+ *	5 Tab Menu
+ *	6 content
+ *	7 Upvote & downvote
+ *	8 sidebar - general
+ */
+ 
+ 
+.voteWeight + .flair {
+    margin-left: 4px;
+}
+
+
+/** 1
+ * General
+ */
+
+body {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+}
+
+a {
+    color: #052A5F;
+}
+
+button {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.error {
+    color: #EC1E31;
+}
+
+/* ######### ANNOUNCEMENT TEXT #######*/
+/*
+body >  .content:before {
+	content: 'IMPORTANT : Trying out new subreddit css, please leave your feedback & report bugs  to moderators.'; 
+	display: inline-block;
+	margin: 0 0 1px 30px;
+	padding: 4px 8px;
+        color: #C4C4C4;
+	background-color: #313333;
+	font-weight: bold;
+}
+*/
+/** 2
+ * Sub-reddit header area
+ */
+	#sr-header-area {
+			opacity: 0.5;
+			height:20px;
+			background-color: #333;
+			border-bottom: 1px solid #333;
+                      
+		}
+
+			#sr-header-area:hover {
+				opacity: 80;
+			}
+
+			#sr-header-area a {
+				color: #C4C4C4;
+				font-family: Verdana, Arial, sans-serif;
+			}
+		
+				#sr-header-area a:hover {
+					color: #a72828; 
+					text-decoration: none;
+				}
+		
+			#sr-more-link {
+				position: absolute;
+				background-color: #333;
+				color: #C4C4C4;
+			}
+		
+			.dropdown.srdrop .selected {background-image: none;}
+			.dropdown.srdrop .selected:after {content: "?";}
+			.sr-bar .separator {color: #333;}
+
+			#sr-header-area .width-clip .dropdown.srdrop .selected.title {
+				color: #C4C4C4;
+				font-size: 9px;
+				font-weight: normal;
+				font-family: Verdana, Arial, sans-serif;
+				padding-right: 3px;
+			}
+
+				#sr-header-area .width-clip .dropdown.srdrop .selected.title:hover {
+					color: #313333;
+				}
+
+			#sr-header-area .drop-choices a.choice {
+				color: #333 !important;
+			}
+
+			 #sr-header-area .drop-choices a.choice:hover {
+			 	background-color: #313333;
+			 	color: #fff !important;
+			 }
+
+ 
+.dropdown.srdrop .selected {
+    background-position: 100% 2px;
+}
+
+/** 3
+ * Banner
+ */
+#header {
+    background-color: #052A5F;
+    background: url(%%headerimg%%) no-repeat 100% 100%;
+    border-bottom: 0px solid;
+    overflow: visible !important;
+    box-shadow: 0px 0px 10px 0px rgba(53, 53, 74, .3)
+}
+
+#header-img {
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+#header-bottom-left {
+    height: 85px;
+}
+
+    #header-bottom-left a {
+        color: #FFF;
+    }
+
+.user {
+    color: #FFF;
+}
+
+#header-bottom-right[id] {
+    background-color: transparent;
+    top: 22px;
+    right: 5px;
+}
+
+    #header-bottom-right a {
+        color: #FFF;
+    }
+
+#userbarToggle[id] {
+    display: none;
+}
+
+/** 4
+* Clickable subreddit name in the middle.
+*/
+.pagename {
+    color: #FFF;
+    line-height: 52px;
+    position: absolute;
+    top: 65px;
+    margin-left: 10px;
+}
+
+   .pagename a {
+
+	/*visibility: visible !important;
+	position: absolute;
+	margin-left: -170px; */ /* 8 for left side */
+	/* top: 40px; */ /* 8 for left side */
+        position: absolute;
+        font-size:24px;
+        opacity: .90;
+        
+    }
+        .pagename a:hover {
+            opacity: 1;
+      }
+        /*.pagename {visibility: hidden;}*/
+
+.separator {
+    color: #FFF;
+}
+
+/** 5
+ * --------- Tab Menu -----------
+ */
+
+
+#header .tabmenu {
+    bottom: 0;
+    left: 247px;
+    position: absolute;
+    padding-left: 50px;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+	#header .tabmenu li a {
+	background-color: transparent;
+	color: #FFF;
+	display: inline-block;
+	padding: 4px 8px;
+	}
+
+        #header .tabmenu li a:hover {
+        background-color: #9e3726;
+        }
+
+        #header .tabmenu li a:active {
+        background-color: #8c3122;
+        }
+
+	#header .tabmenu li.selected a,
+	#header .tabmenu li.selected a:hover {
+	background-color: #FFF;
+	border: 1px solid #000;
+	border-bottom: 0;
+	color: #b03e2b;
+	}
+		
+        .listing-page .tabmenu li:nth-of-type(3){display:none;}	
+	.listing-page .tabmenu li:nth-of-type(4){display:none;}	
+	.listing-page .tabmenu li a[href*="/promoted"]{display:none;}
+	.listing-page .tabmenu li a[href*="/gilded"]{display:none;}	
+	.listing-page .tabmenu li:nth-of-type(8){display:none;} 
+        /*.listing-page .tabmenu li:nth-of-type(7){display:none;} */
+
+	.tabmenu.formtab .selected a {
+	font-size: 13px;
+	padding-top: 1px;
+	}
+
+
+/** 6
+ * Content
+ */
+
+.content {
+        margin-right: 315px;
+        margin-left: 10px;    
+}
+
+/* 7
+* Upvote & downvote
+*/
+.arrow.upmod,
+.arrow.downmod {
+    background-image :url(%%sprite%%) !important;
+}
+
+.arrow.upmod {
+    background-position: -84px -796px;
+}
+
+.arrow.downmod {
+    background-position: -42px -796px;
+}
+
+/** 8
+ * Sidebar
+ */
+
+.side {
+    margin: 0 10px;
+	float: right;
+	margin: 11px 10px 0px 0px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 4px 6px #cecece;
+	box-shadow: 0 4px 6px #cecece;
+	width: 300px;
+	text-align: left;
+}
+
+    .side .spacer {
+        margin-top: 10px;
+    }
+
+
+/* H3 - Flair part */
+	.side .md h3,
+	.sidecontentbox .title h1,
+	.side .flairtoggle:before {
+		background-color: #FBFBFB;
+		background-image: linear-gradient(to bottom,#FBFBFB,#EAEAEA);
+		border: 1px solid #313333;
+		color: #000;
+		content: "Flair";
+		display: block;
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+		padding: 4px 8px;
+}
+
+	.side .md a:hover {
+		text-decoration: underline;
+	}
+
+
+
+/* Sidebar - Search */
+
+#search input[type=text] {
+    border: 1px solid #31333;
+}
+
+    #search input[type=text]:focus {
+        border: 1px solid #94121e;
+    }
+
+#searchexpando {
+    border-radius: 0;
+    padding-bottom: 10px;
+}
+
+    #searchexpando p {
+        margin-bottom: 0;
+    }
+
+    form #searchexpando input[type=checkbox] {
+        margin-top: 1px;
+        vertical-align: top;
+    }
+
+/*---------- Submission page rules warning ----------*/
+
+form.submit > .formtabs-content > .spacer:first-child::after {
+    display: block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #b03e2b; /* old green color #7CBD40 */
+    text-align: center;
+    border: 1px solid #267934;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    content: "Please check rules before posting (see sidebar for more information)";
+    }
+/* ----Broken/dont touch ---
+.submit #url-field .title::after {
+    content: "[](/flairexpic)";
+    background-image: url(%%flairexpic%%); 
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: inline-block;
+    width: 781px;
+    height: 258px;
+    border: 2px solid black;
+    cursor: default;
+}
+*/
+
+/* ***********SUBMIT BUTTON *************** */
+.sidebox.submit .morelink a {
+    position: absolute;
+    top: 0;
+    font-size: 0;
+    }
+
+/*
+.sidebox.submit.submit-link .morelink:before {
+    display: block;
+    clear: none;
+    content: "Offer a sacrifice";
+    text-align: center;
+    color: #369;
+    width: 100%
+    }
+
+*/
+.sidebox.submit.submit-text .morelink:before {
+    display: block;
+    clear: none;
+    content: "Submit a new question";
+    text-align: center;
+    width: 100%
+    }
+
+.sidebox.submit .spacer {
+    cursor: text
+    }
+.titlebox .bottom, .sidecontentbox .content:nth-child(3) {
+    cursor: pointer
+    }
+
+
+/*---------- Infobar ----------*/
+.infobar {
+    background-color: #b03e2b;
+    border: 1px solid #b03e2b;
+}
+
+    .infobar,
+    .infobar a {
+        color: #FFF;
+        text-align: center;
+    }
+
+
+
+/* Sidebar - Login */
+
+.login-form-side {
+    border: 1px solid #313333;
+}
+
+
+
+/* Sidebar - Boxes in sidebar, border colours etc */
+
+.morelink,
+.sidecontentbox > a.helplink {
+    background-color: #FBFBFB;
+    background-image: linear-gradient(to bottom, #FBFBFB, #EAEAEA);
+    background-position: 0 0;
+    border: 1px solid #313333; /*border color*/
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+    .morelink a,
+    .sidecontentbox > a.helplink {
+        color: #333; /* font color */
+    }
+
+    .morelink:hover,
+    .sidecontentbox > a.helplink:hover {
+        background-color: #31333;
+        background-image: linear-gradient(to bottom, #313333, #EAEAEA);
+        background-position: 0 0;
+        border: 1px solid #99999;
+    }
+
+        .morelink:hover a,
+        .sidecontentbox > a.helplink:hover {
+            color: #333;
+        }
+
+    .morelink:active,
+    .sidecontentbox > a.helplink:active {
+        background-color: #999999;
+        background-image: linear-gradient(to bottom, #040505, #EAEAEA);
+        background-position: 0 0;
+    }
+
+    .morelink .nub {
+        display: none;
+    }
+
+.sidecontentbox > a.helplink {
+    display: block;
+    float: none;
+    font-size: 0;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 29px;
+    height: 29px;
+    margin: 7px 0 12px;
+    text-align: center;
+
+}
+
+    .sidecontentbox > a.helplink:before {
+        content: "Message the moderators";
+        font-size: 15px;
+    }
+
+.roundfield {
+    background-color: #F5F5F5;
+    border-radius: 0;
+    padding: 10px;
+}
+
+#url-field .title-status {
+    color: #EC1E31;
+}
+
+.gold-accent {
+    border-color: #AA8800;
+}
+
+.content.submit .info-notice {
+    border-color: #0476BF;
+}
+
+
+/* Sidebar - No photo atm */
+
+.side .titlebox {
+    background-repeat: no-repeat;
+	/*background-image: url(%%sidebar-photo%%); ** Sidebar photo if necessary
+    * padding-top: 169px; */
+}
+
+.side .titlebox:before {
+    background: #052A5F;
+    color: #FFF;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+}
+
+
+/* Sidebar - Link Information */
+
+.linkinfo {
+    background-color: #FFF;
+    border: 1px solid #313333;
+    border-radius: 0;
+    padding-top: 0;
+}
+
+    .linkinfo .date {
+        background-color: #FBFBFB;
+        background-image: linear-gradient(to bottom, #FBFBFB, #EAEAEA);
+        border: 1px solid #313333;
+        border-top: 0;
+        padding: 4px;
+        margin: 0 -6px;
+        text-align: center;
+    }
+
+    .linkinfo .date span {
+        font-size: 0;
+    }
+
+    .linkinfo .date span:after {
+        content: "This post was submitted on ";
+        display: inline;
+        font-size: 12px;
+        font-weight: normal;
+        color: #333;
+    }
+
+    .linkinfo time {
+        font-weight: bold;
+    }
+
+    .linkinfo .score,
+    .linkinfo .totalvotes {
+        float: left;
+        font-size: 12px;
+        min-height: 40px;
+        padding: 15px 0;
+        text-align: center;
+        width: 50%;
+    }
+
+        .linkinfo .score .number,
+        .linkinfo .totalvotes .number {
+            display: block;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .linkinfo .score .word {
+            display: none;
+        }
+
+        .linkinfo .totalvotes .word {
+            font-size: 12px;
+        }
+
+    .linkinfo .shortlink {
+        clear: both;
+        display: block;
+        text-align: center;
+    }
+
+        .linkinfo .shortlink input {
+            border: 1px solid #313333;
+            font-size: 13px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+
+/* Sidebar - Subscribers and online number */
+
+.titlebox h1.redditname {
+    background-image: url(%%wordmark-300%%);
+    height: 50px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    text-indent: -9999em;
+    width: 300px;
+}
+
+.subscribers .word {
+	display: none;
+        margin-left: 15px;
+}
+.subscribers .number {
+        margin-left: 60px;
+        height: auto;
+        width: auto;
+
+}
+.subscribers .number:after {
+	content: ' subscribers';
+}
+
+.users-online {
+    color: #999;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+    .users-online:before {
+        background-image: none;
+        display: inline-block;
+        content: "";
+        height: auto;
+        margin-right: 0;
+        width: auto;
+    }
+
+    .users-online:after {
+        content: "online.";
+    }
+
+    .users-online .word {
+        display: none;
+    }
+
+.titlebox input[type=checkbox] {
+    vertical-align: top;
+}
+
+
+/** Sidebar - Flair */
+
+.side .flairtoggle {
+    border: 1px solid #313333;
+    border-bottom: 0;
+}
+
+.titlebox form.flairtoggle {
+    margin-top: 10px;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.side .flairtoggle:before {
+    border: 0;
+    border-bottom: 1px solid #313333;
+    content: "Flair";
+    display: block;
+    margin: 0 -10px 10px;
+}
+
+.side .tagline {
+    border: 1px solid #313333;
+    border-top: 0;
+    margin: 0;
+    padding: 10px;
+    padding-left: 31px;
+    padding-top: 0;
+}
+
+
+/* ********** ANNOAUDNASDNASMASDAS ************************************** */
+
+.titlebox .usertext-body .md h6 {
+ border-radius: 2px;
+ position: absolute;
+ background-color: white;
+ -moz-opacity:.90;opacity:.60;
+ border: 0px solid #000;
+ display: block;
+ line-height: 15px;
+ padding: 4px;
+ font-size: 90%;
+ font-weight: bold;
+ z-index: 9001;
+ box-shadow: 0px 0px 10px #111111;
+ color: #313333;
+ text-decoration: none;
+}
+
+.md h6 a:hover {
+ color: black;
+}
+
+.self .md table {margin: 10px auto;}
+.self .md th { font-weight: bold; background-color: #54261e; color: white; text-align: center;}
+.self .md td, .self .md th { border: 1px solid #CCC; padding: 1px 3px;}
+.wiki table {margin: 10px auto;}
+.wiki th {font-weight: bold; background-color: #54261e; color: white; text-align:center;}
+.wiki td, .wiki th {border: 1px solid #CCC; padding: 1px 3px;}
+td>em {
+ background-color: #F6E8FA;
+}
+.md td em {
+ font-style: normal;
+}
+.titlebox .usertext-body .md h6 {
+ top: 20px !important;
+ left: 280px !important;
+}
+
+.titlebox form {
+ position: static
+}
+.titlebox .usertext-body .md h6:before {
+ content: "ONGOING MORBID-AMA:";
+ color: #b03e2b;
+ border-right: 1px solid #FFF;
+ padding-right: 0px;
+ margin-right: 5px;
+ font-weight: bold;
+ text-decoration: underline;
+}
+
+/* ********** ANNOAUDNASDNASMASDAS ************************************** */
+
+.titlebox .usertext-body .md h5 {
+ border-radius: 2px;
+ position: absolute;
+ background-color: white;
+/* filter:alpha(opacity=70); */
+ -moz-opacity:.50;opacity:.60;
+ border: 0px solid #000;
+ display: block;
+ line-height: 15px;
+ padding: 4px;
+ font-size: 90%;
+ font-weight: bold;
+ z-index: 9001;
+ box-shadow: 0px 0px 10px #111111;
+ color: #313333;
+ text-decoration: none;
+}
+
+.md h5 a:hover {
+ color: black;
+}
+
+.titlebox .usertext-body .md h5 {
+ top: 45px !important;
+ left: 280px !important;
+}
+
+.titlebox .usertext-body .md h5:before {
+ content: "ONGOING MORBID-AMA:";
+ color: #b03e2b;
+ border-right: 1px solid #FFF;
+ padding-right: 0px;
+ margin-right: 5px;
+ font-weight: bold;
+ text-decoration: underline;
+}
+
+
+
+/* *********** Sidebar - Custom Content ************************** */
+
+
+.side .md h2 {
+    background: #313333;
+    color: #FFF;
+    font-size: 14px;
+    margin: 10px 0 10px;
+    text-align: center;
+    padding: 4px;
+}
+
+.side .md h3 {
+    background-color: #FBFBFB;
+    background-image: linear-gradient(to bottom, #FBFBFB, #EAEAEA);
+    border: 1px solid #313333;
+    padding: 4px 8px;
+    text-align: center;
+}
+    /*sidebar lines */
+    .side .md h3 + ul {
+        border: 1px solid #313333;
+        border-top: 0;
+        margin: 0px;
+        margin-top: -10px;
+        margin-bottom: 15px;
+        padding: 5px;
+        padding-left: 5px;
+    }
+
+.side .md ul {
+
+margin: 0px;
+
+}
+
+
+.side .md ul li {
+
+list-style-type: none;
+padding: 3px;
+
+}
+
+
+
+/** Sidebar - Unsubscribe */
+
+.fancy-toggle-button .active, .RESDashboardToggle[class], .RESshortcutside[class] {
+    border-radius: 0;
+    display: inline-block;
+    line-height: inherit;
+    padding: 2px 2px 3px;
+    text-align: center;
+    width: 90px !important;
+}
+.RESDashboardToggle {
+    margin-right: 0 !important;
+}
+.fancy-toggle-button .active {
+    background-color: #EC1E31;
+}
+
+.RESshortcutside:hover, .RESDashboardToggle :hover {
+    background-image: none !important;
+    background-color: #454747 !important;
+     }
+
+.fancy-toggle-button .remove {
+    background-image: none;  
+    background-color: #EC1E31 !important;
+	}
+
+.fancy-toggle-button .add {
+    background-image: none;
+    background-color: #454747 !important;
+}
+
+.RESshortcutside, .RESDashboardToggle {
+    background-image: none !important;
+    background-color: #454747;
+}
+
+.RESshortcutside.remove, .RESDashboardToggle.remove {
+    background-image: none !important; 
+    background-color: #EC1E31 !important;
+}
+
+.RESshortcutside.remove, .RESDashboardToggle.remove {
+    background-image: none;
+    background-color: #EC1E31;
+}
+
+
+/** Post options */
+.toggle .option.active {
+    display: inline-block;
+    /*background-color: #313333 !important;*/
+}
+
+
+/** Sidebar - Moderator **/
+
+.leavemoderator {
+    display: none;
+    margin-top: 10px;
+}
+
+.leavecontributor-button {
+    display: none;
+}
+
+.sidecontentbox .content {
+    border: 1px solid #313333;
+    border-top: 0;
+}
+
+.sidecontentbox .title {
+   position: relative;
+}
+
+    .sidecontentbox .title h1 {
+       font-size: 13px;
+       text-transform: capitalize;
+    }
+
+    #moderation_tools .title h1:before,
+    .sidecontentbox .title h1:before {
+        font-size: 13px;
+    }
+
+    #moderation_tools .title h1:before {
+        content: "";
+    }
+
+/*    .sidecontentbox .title h1:before {
+       content: "Moderators";
+    }
+    .sidecontentbox .title2 h1:before {
+      content: "Recently viewed"; 
+    }
+*/
+
+   .sidecontentbox .title .collapse-button {
+       position: absolute;
+        top: 6px;
+       right: 65px;
+    }
+
+#moderation_tools .icon-menu li {
+   padding-left: 5px;
+}
+
+
+
+/** Sidebar - Create a subreddit */
+
+.sidebox.create {
+    display: none;
+}
+
+/** Sidebar - Hide Created by text --- NOT ACTIVE */
+/* .titlebox .bottom {
+*	font-size: 0;
+*	visibility: hidden;
+* }
+* .bottom .age {
+*	font-size: small;
+*	visibility: hidden;
+* }
+*/
+.titlebox .usertext {
+	border-bottom: 1px solid;
+ }
+
+
+/* Pages - Listing Page */
+
+.infobar.welcome {
+    margin: 10px !important;
+}
+
+    .infobar.welcome h1 {
+        color: #333;
+    }
+
+.arrow {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.link {
+    border-left: 5px solid #999;
+    margin: 10px;
+    overflow: visible;
+    padding: 10px;
+    padding-bottom: 6px;
+    position: relative;
+    transition: border 0.2s ease-out;
+}
+
+    .link.linkflair .flairselector .linkflairlabel {
+        display: inline-block;
+        margin: 3px;
+    }
+
+    .link.even {
+        background: #F5F5F5;
+    }
+
+    .link:hover {
+        border-left: 5px solid #313333;
+        background-color: #FBFBFB !important;
+    } 
+
+
+    .link .rank {
+	display: none;
+
+    }
+
+    .link.stickied {
+        border: 1px solid #313333;
+        border-left: 5px solid #313333;
+    }
+
+        .link.stickied a.title {
+            color: #b03e2b !important;
+        }
+
+/* ------------------- */
+/* LAST CLICKED HOTFIX */
+/* ------------------- */ 
+.link.last-clicked {
+        border: 0px solid #313333;
+        border-left: 5px solid #313333;
+        /*overflow: visible;*/
+    }
+      /* .link.last-clicked:not(.linkflair):hover {
+            border: 1px solid #052A5F;
+            border-left: 5px solid #052A5F;
+        }
+     */
+
+
+/* -------- ---- ---------- */
+/*  LINK FLAIRS - DISABLED  */
+/* -------- ---- ---------- */
+
+.linkflairlabel {
+    border:none;
+    text-align: center;
+    min-width: 80px;
+    padding: 2px 0px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    font-size: 73%;
+    font-weight: bold;
+    opacity:.9;
+    background-color: transparent;
+}
+
+.linkflair-mama .linkflairlabel {
+    color: #E4F1FE;
+    background-color: #2C3E50;
+    /*font-size: 71%;*/
+    border: 1px solid grey; 
+}
+
+
+.linkflair-subnew .linkflairlabel {
+    background-color: #d2d7d3;
+    color: #414141;
+    border: 1px solid black;
+}
+
+
+.side a[href*='http://www.reddit.com/r/morbidquestions/search?sort=new&restrict_sr=on&q=flair%3AMorbid-AMA'] { 
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    font-size: 100%;
+    padding: 2px 0px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #2C3E50;
+    color: #E4F1FE;
+    opacity:.9;
+    border:none;
+    left:50px;
+   /* top:-92px;*/
+}
+
+.side a[href*='http://www.reddit.com/r/morbidquestions/search?sort=new&restrict_sr=on&q=flair%3ASub%News'] { 
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    font-size: 90%;
+    padding: 2px 0px;
+    color: #414141;
+    font-weight: bold;
+    background-color: #d2d7d3;
+    min-width: 80px;
+    text-align: center;
+    border:1px solid black;
+    vertical-align: middle;
+    opacity:.9;
+    border: none;
+    left:150px;
+    top:-25px;
+}
+
+.side a[href*='http://www.reddit.com/r/morbidquestions/wiki/index'] { 
+    display: inline-block;
+    position: relative;
+    margin-left:20px;
+    font-size: 100%;
+    padding: 2px 0px;
+    color: black;
+    font-weight: 14;
+    font-weight: bold;
+    background-color: transparent;
+    min-width: 240px;
+    text-align: center;
+    border:1px solid black;
+    vertical-align: middle;
+    opacity:.9;
+}
+
+/*
+    .link .score.likes,
+    .res_post_ups {
+        color: #EC1E31;
+    }
+
+    .link .score.dislikes,
+    .res_post_downs {
+        color: #052A5F;
+    }
+*/
+
+/*----------------------------------------------------------
+
+
+.link .title {
+    color: #1A459D;
+}
+
+    .link.linkflair .title {
+        font-weight: bold;
+    }
+
+    .link .title:hover {
+        color: #052A5F;
+    }
+
+    .link .title:active {
+        color: #0E2452;
+    }
+
+.nsfw-stamp acronym {
+    color: #EC1E31;
+}
+
+	.entry {
+		padding-left: 1px;
+	}
+    .entry .buttons li a,
+    .entry .buttons li .redditSingleClick {
+    color: #999;
+    transition: color 0.1s ease-out;
+}
+
+    .entry .buttons li a[onclick="return reply(this)"],
+    .entry .buttons li a.comments,
+    .comment .entry:hover .buttons li a,
+    .link:hover .entry .buttons li a,
+    .link:hover .entry .buttons li .redditSingleClick {
+        color: #313333;
+    }
+    .link .rank {display: none;}
+
+.tagline,
+.comment .score {
+    font-size: 11px;
+}
+
+.edited-timestamp[title]:after {
+    font-size: 11px !important;
+}
+
+    .thumbnail {
+		max-height: 20px;
+		max-width: 30px;
+                margin-top:3px
+	} 
+
+/*
+** Circular links
+*/
+/*
+.link .thumbnail {
+    position: relative;
+    height: 50px;
+    width: 50px; 
+    margin: 20px 16px 10px 11px;
+    border-radius: 80%;
+    background-position: 0;
+    background-image: none;
+    text-align: center;
+ }
+*/
+
+/**
+ * Pages - Submit Page
+ */
+
+.submit-page h1 {
+    margin-left: 5px;
+}
+
+#suggested-reddits ul {
+    margin-top: 10px;
+}
+
+#suggested-reddits li {
+    display: inline-block;
+    overflow: hidden;
+    width: 24%;
+}
+
+
+
+/**
+ * Pages - Comment page
+ */
+
+.link .usertext .md {
+    background-color: #FFF;
+    border: 1px solid #313333;
+    border-radius: 0;
+    padding: 10px;
+}
+
+.panestack-title {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+    .panestack-title a.title-button.gold {
+        background-color: #FFCC00;
+        border: 1px solid #AA8800;
+    }
+
+.content .spacer {
+    margin-bottom: 10px;
+}
+
+/* Align #noresults with comment box */
+.commentarea #noresults {
+    margin-left: 10px;
+}
+
+/* Contest mode */
+.comment-area .help-hoverable {
+    font-size: 11px;
+}
+
+.gold-accent.comment-visits-box {
+    border-radius: 0;
+    margin-left: 10px;
+}
+
+/* Force [-] and [+] to be aligned when collapsed/noncollapsed */
+.comment .collapsed {
+    padding-top: 3px;
+}
+
+.collapsed .expand {
+    margin-left: 6px;
+}
+
+/* Remove default child */
+/* Add left border to comments to denote children */
+
+.child {
+    border-left: 0;
+}
+
+
+/* Comment line */
+
+html:not([lang="ns"]) .commentarea .thing,
+.res-commentBoxes .comment,
+.comment {
+    border: 1px solid #E6E6E6;
+    border-radius: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 5px 8px 0 13px !important;
+    position: relative;
+}
+
+    html:not([lang="ns"]) .commentarea .thing:hover,
+    .res-commentBoxes .comment:hover,
+    .comment:hover {
+        padding-left: 12px;
+    }
+
+html:not([lang="ns"]) .commentarea .thing:after,
+.res-commentBoxes .comment:after,
+.comment:after {
+    background-color: #E6E6E6;
+    content: "";
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    transition: background-color 0.1s ease-out;
+}
+
+    html:not([lang="ns"]) .commentarea .thing:hover:after,
+    .res-commentBoxes .comment:hover:after,
+    .comment:hover:after {
+        background-color: #313333;
+        width: 4px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing,
+    .res-commentBoxes .comment .comment,
+    .comment .comment {
+        padding-left: 11px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing:after,
+    .res-commentBoxes .comment .comment:after,
+    .comment .comment:after {
+        width: 3px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing:hover:after,
+    .res-commentBoxes .comment .comment:hover:after,
+    .comment .comment:hover:after {
+        width: 3px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing .thing,
+    .res-commentBoxes .comment .comment .comment,
+    .comment .comment .comment {
+        padding-left: 10px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing .thing:after,
+    .res-commentBoxes .comment .comment .comment:after,
+    .comment .comment .comment:after {
+        width: 2px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing .thing:hover:after,
+    .res-commentBoxes .comment .comment .comment:hover:after,
+    .comment .comment .comment:hover:after {
+        width: 2px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing .thing .thing,
+    .res-commentBoxes .comment .comment .comment .comment,
+    .comment .comment .comment .comment {
+        padding-left: 9px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing .thing .thing:after,
+    .res-commentBoxes .comment .comment .comment .comment:after,
+    .comment .comment .comment .comment:after {
+        width: 1px;
+    }
+
+    html:not([lang="ns"]) .commentarea .thing .thing .thing .thing:hover:after,
+    .res-commentBoxes .comment .comment .comment .comment:hover:after,
+    .comment .comment .comment .comment:hover:after {
+        width: 1px;
+    }
+
+/* Force vertical alignment of [-], username, RES icons, flair */
+/*.comment .tagline > * {
+    vertical-align: middle;
+}*/
+
+.comment .midcol {
+    width: 20px;
+}
+
+
+
+/**
+ * Pages - Moderation Pages
+ */
+
+.linefield {
+    background-color: #EAEAEA;
+}
+
+    .linefield .title {
+        color: #052A5F;
+    }
+
+
+
+/**
+ * Markdown content styles
+ */
+
+.md {
+    line-height: 1.4;
+    max-width: 50em;
+}
+
+.md p {
+    margin: 8px 0;
+}
+
+.md blockquote {
+    border-left: 2px solid #313333;
+}
+
+.md ul {
+    margin-left: 3em;
+}
+
+.md table {
+    border: 1px solid #313333;
+    border-top: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+    .md table th,
+    .md table td {
+        border: 1px solid #313333;
+        padding: 4px 3px;
+    }
+
+    .md table th {
+        background-color: #FBFBFB;
+        background-image: linear-gradient(to bottom, #FBFBFB, #EAEAEA);
+        border: 3px solid #052A5F;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .md table th[align="center"] {
+        text-align: center;
+    }
+
+    .md table td {
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .md table tr:hover td {
+        background-color: #FBFBFB;
+    }
+
+    .md table td:empty {
+        min-width: 10px;
+    }
+
+.md pre {
+    background: #F5F5F5;
+    border: 1px solid #313333;
+    padding: 10px;
+}
+
+
+/**
+ * Content Markdown styles
+ */
+
+.content .md h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content .md h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content .md h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content .md h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content .md h5 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*.content .md h6 {
+    font-size: 12px;
+    font-weight: bold;
+}
+*/
+.content .md h1,
+.content .md h2,
+.content .md h3,
+.content .md h4,
+.content .md h5,
+.content .md h6 {
+    color: #333;
+}
+
+.content .md h1,
+.content .md h2,
+.content .md h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content .md h4,
+.content .md h5,
+.content .md h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content .md h1:first-child,
+.content .md h2:first-child,
+.content .md h3:first-child,
+.content .md h4:first-child,
+.content .md h5:first-child,
+.content .md h6:first-child {
+    margin-top: 0;
+}
+
+.content .md a:hover {
+    text-decoration: underline;
+}
+
+
+/**
+ * RES
+ */
+
+
+.RES-keyNav-activeElement[class] {
+  background-color: transparent !important; 
+    /*outline: none;*/
+    border-right: 2px solid darkblue;
+}
+
+#REScommentNavToggle span:first-child {
+    margin-left: 0;
+}
+
+.res-commentBoxes.res-commentBoxes-rounded .comment[class] {
+    border-radius: 0 !important;
+}
+
+.content .RESBigEditorPop {
+    padding: 1px 3px !important;
+}
+
+.markdownEditor {
+    margin-bottom: 3px;
+}
+
+    .markdownEditor > a b {
+        margin-left: 0;
+    }
+
+.NERPageMarker {
+    border-radius: 0 !important;
+}
+
+/* Make comment subscribe button the same size as gold */
+.RESSubscriptionButton {
+    font-size: 12px;
+    padding: 1px 5px;
+    width: auto;
+}
+
+.RESDialogSmall {
+    border-radius: 0 !important;
+}
+
+/**
+ * RES Nightmode
+ */
+
+.res-nightmode {}
+
+    .res-nightmode a {}
+
+    .res-nightmode .link.even {
+        background-color: #333;
+    }
+
+    .res-nightmode #header-bottom-left .tabmenu .selected a {
+        padding-bottom: 4px !important;
+    }
+    .res-nightmode #sr-header-area {
+			opacity: 0.5;
+			height:20px;
+			background-color: #435a6a;
+			border-bottom: 1px solid #333;
+                      }
+    .res-nightmode .side .titlebox blockquote:first-child ul li {
+        background-color: #666660;
+    }
+
+    .res-nightmode .link:hover,
+    .res-nightmode .arrow.up,
+    .res-nightmode .arrow.down,
+    .res-nightmode .flair {
+        background-color: transparent !important;
+    }
+
+    .res-nightmode .RES-keyNav-activeElement,
+    .res-nightmode .RES-keyNav-activeElement .usertext-body,
+    .res-nightmode .RES-keyNav-activeElement .usertext-body .md,
+    .res-nightmode .RES-keyNav-activeElement .usertext-body .md p,
+    .res-nightmode .commentarea .RES-keyNav-activeElement .noncollapsed,
+    .res-nightmode .RES-keyNav-activeElement .noncollapsed .md,
+    .res-nightmode .RES-keyNav-activeElement .noncollapsed .md p {
+        background-color: #3C3C3C !important;
+    }
+
+    .res-nightmode .md table th {
+        background-color: #333;
+        background-image: none;
+        border: 1px solid #EEE;
+    }
+
+    .res-nightmode .md table tr:hover td {
+        background-color: #3C3C3C;
+    }
+
+    .res-nightmode .linkinfo .date,
+    .res-nightmode .morelink,
+    .res-nightmode .sidecontentbox > a.helplink,
+    .res-nightmode .sidecontentbox .title h1,
+    .res-nightmode .side .flairtoggle:before,
+    .res-nightmode .side .md h3 {
+        background-color: #333;
+        background-image: linear-gradient(to bottom, #333, #222) !important;
+        border: 1px solid #EEE !important;
+        color: #FFF !important;
+    }
+
+    .res-nightmode .linkinfo .date {
+        border-top: 0 !important;
+    }
+
+    .res-nightmode .morelink,
+    .res-nightmode .morelink a,
+    .res-nightmode .sidecontentbox>a.helplink {
+        color: #FFF !important;
+        text-shadow: 1px 1px 0 #000;
+    }
+
+    .res-nightmode .sidebox,
+    .res-nightmode .subredditbox,
+    .res-nightmode .subreddit-info,
+    .res-nightmode .raisedbox,
+    .res-nightmode .login-form-side,
+    .res-nightmode .sidebox .morelink {
+        border-radius: 0 !important;
+    }
+
+    .res-nightmode .linkinfo .date span:after {
+        color: #FFF !important;
+    }
+
+
+    .res-nightmode .sidecontentbox .content,
+    .res-nightmode .linkinfo {
+        border: 1px solid #EEE !important;
+    }
+
+    .res-nightmode .side .md h3 + ul {
+        border: 1px solid #EEE;
+        border-top: 0;
+    }
+
+    .res-nightmode .flair {
+        color: #FFF;
+    }
+
+/*****************
+wiki page
+*****************/
+
+
+.arrow.down:hover:before {    
+position: absolute;    
+display: block;    
+z-index: 1000;    
+width: 210px;    
+padding: 5px;    
+border: 0px solid #333;    
+background: #000000;    
+content: "Detracts from the conversation. OPINIONS should not be downvoted.";    
+text-align: center;    
+font-size: 10px;    
+color: white;    
+font-weight: bold;    
+margin-left: 25px;    
+margin-top: 5px;    
+-moz-border-radius: 4px;    
+-webkit-border-radius: 4px    
+} 
+
+.arrow.down {visibility: hidden;    
+display: none    
+}
+
+.comment .arrow.down {    
+visibility: visible;    
+display: block;    
+}
+
+
+/** Autowikibot hover to display **/
+.comment .md h5+h6+h4+p,.comment .md h5+h6+h4+p+hr,.comment .md h5+h6+h4+p+hr+blockquote,.comment .md h5+h6+h4+p+hr+blockquote+hr,.comment .md h5+h6+h4+p+hr+blockquote+hr+p,.comment .md h5+h6+h4+p+hr+blockquote+hr+p+p {
+ display: none;
+}
+.comment .md:hover h5+h6+h4+p,.comment .md:hover h5+h6+h4+p+hr,.comment .md:hover h5+h6+h4+p+hr+blockquote,.comment .md:hover h5+h6+h4+p+hr+blockquote+hr,.comment .md:hover h5+h6+h4+p+hr+blockquote+hr+p,.comment .md:hover h5+h6+h4+p+hr+blockquote+hr+p+p {
+ display: block;
+}
+.comment .md h5+h6+h4:after {
+ content: "Autowikibot post. Hover to view";
+}
+.comment .md:hover h5+h6+h4:after {
+content: ""
+}
+li#tab-templates, li#tab-link_templates {
+z-index: 2;
+position: relative;
+}
+
+/* ***********************WIKI PAGE STARTS HERE ********************** */
+
+/*****************
+wiki page
+*****************/
+
+/*** headings ***/
+.wiki-page-index .wiki h3 {
+    text-align: center;
+    color: white!important;
+    background-color: #59788d;
+    overflow: hidden;
+    padding: 2px 0;
+    border-radius: 3px;
+}
+    .wiki-page-index .wiki h3 a {color: white!important; text-decoration: underline;}
+
+.wiki-page-index .wiki h4 {
+    color: #7097b1!important;
+    border-bottom: 1px solid #7097b1;
+    margin-top: 20px;
+    text-indent: 14px;
+    overflow: hidden;
+    padding-bottom: 2px;
+}
+    .wiki-page-index .wiki h4 a {color: #7097b1!important; text-decoration: underline;}
+
+/*** lines ***/
+.wiki-page-index .wiki hr {
+    border-bottom: 1px dashed black;
+    border-top: none;
+    border-radius: 0;
+}
+
+
+/*** pictures ***/
+.wiki-page-index .wiki a[href*="/flairpic"] {
+    background-image: url(%%flairexpic%%); 
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: inline-block;
+    width: 781px;
+    height: 258px;
+    border: 2px solid black;
+    cursor: default;
+}
+
+
+
+/* flair icons */
+
+
+.wiki-page-index .wiki a[href$="http://www.reddit.com/r/morbidquestions/search?sort=new&restrict_sr=on&q=flair%3AUnanswered"] {
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    font-size: 90%;
+    padding: 2px 0px;
+    color: #414141;
+    font-weight: bold;
+    background-color: #D2D7D3;
+    min-width: 80px;
+    text-align: center;
+    border:1px solid black;
+    vertical-align: middle;
+    opacity:.9;
+    border: none;
+}
+
+.wiki-page-index .wiki a[href$="http://www.reddit.com/r/morbidquestions/search?sort=new&restrict_sr=on&q=flair%3AAnswered"] {
+    display: inline-block;
+    position: relative;
+    margin-top:0px;
+    font-size: 100%;
+    padding: 2px 0px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #2C3E50;
+    color: #E4F1FE;
+    opacity:.9;
+    border:none;
+}
+
+
+/*** table ***/
+.wiki-page-index .wiki thead {
+    background-color: #B9CFF1;
+}
+.wiki-page-index .wiki thead th {border-color: #DFEDFB;}
+
+@keyframes rainbow {0% {color:red;}14% {color:orange;}28% {color:yellow;}42% {color:green;}56% {color:blue;}70% {color:#4B0082;}84% {color:black;}}
+@-moz-keyframes rainbow {0% {color:red;}14% {color:orange;}28% {color:yellow;}42% {color:green;}56% {color:blue;}70% {color:#4B0082;}84% {color:black;}}
+@-webkit-keyframes rainbow {0% {color:red;}14% {color:orange;}28% {color:yellow;}42% {color:green;}56% {color:blue;}70% {color:#4B0082;}84% {color:black;}}
+
+.flair-rainbow{color:red; -webkit-animation:rainbow 4s linear infinite; -moz-animation:rainbow 4s linear infinite; animation:rainbow 4s linear infinite;}
+
+.author[href$="/sanfrancisco69er"]
+ {
+   color:red;
+  -webkit-animation:rainbow 4s linear infinite;
+  -moz-animation:rainbow 4s linear infinite;
+   animation:rainbow 4s linear infinite;
+}
+
+.author[href$="/MassRain"]{
+  color: linear-gradient(to bottom,#f22,#f2f,#22f,#2ff,#2f2,#2f2,#ff2,#f22 );
+}
